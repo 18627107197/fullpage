@@ -1,0 +1,11 @@
+@import "./reset/reset.scss";
+@import "./mixin/mixin.scss";
+@import "./extend/extend.scss";
+@import "./business/about.scss";
+@import "./business/course.scss";
+@import "./business/home.scss";
+@import "./business/team.scss";
+@import "./business/works.scss";
+#app{
+  display: flex;
+}
