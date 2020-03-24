@@ -7,6 +7,4 @@ import "./business/works.js"
 import "./frame/frame.js"
 
 
-setTimeout(()=>{
- console.log(Object.assign({},{name:"damu"},{age:18}))
-},1000)
+
