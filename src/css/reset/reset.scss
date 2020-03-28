@@ -10,7 +10,7 @@
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
 
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
   border: 0;
@@ -38,7 +38,7 @@ html {
 
 /* Responsive images and other embedded objects */
 /* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
-img,
+
 object,
 embed {max-width: 100%;}
 
@@ -66,7 +66,7 @@ blockquote:after,
 q:before,
 q:after {content: ''; content: none;}
 
-a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;text-decoration: none}
 
 del {text-decoration: line-through;}
 
@@ -103,6 +103,7 @@ strong {font-weight: bold;}
 
 td, td img {vertical-align: top;}
 
+
 /* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
 sub, sup {font-size: 75%; line-height: 0; position: relative;}
 sup {top: -0.5em;}
@@ -133,6 +134,8 @@ input[type=button] {width: auto; overflow: visible;}
    (commented out as usage is rare, and the filter syntax messes with some pre-processors)
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
-
+img{
+  display: block;
+}
 
 

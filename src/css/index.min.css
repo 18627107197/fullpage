@@ -8,7 +8,7 @@
 -------------------------------------------------------------------------------*/
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
   border: 0;
@@ -37,7 +37,6 @@ html {
 /* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
 /* Responsive images and other embedded objects */
 /* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
-img,
 object,
 embed {
   max-width: 100%;
@@ -81,6 +80,7 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  text-decoration: none;
 }
 
 del {
@@ -220,6 +220,10 @@ input[type=button] {
    (commented out as usage is rare, and the filter syntax messes with some pre-processors)
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
+img {
+  display: block;
+}
+
 .clearfix {
   zoom: 1;
 }
@@ -227,6 +231,139 @@ input[type=button] {
   display: block;
   content: "";
   clear: both;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html body #app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+html body #app .head {
+  width: 100%;
+}
+html body #app .head .headerMain {
+  width: 1100px;
+  height: 80px;
+  margin: 0 auto;
+}
+html body #app .head .headerMain .logo {
+  float: left;
+  margin-top: 20px;
+}
+html body #app .head .headerMain .list {
+  float: right;
+}
+html body #app .head .headerMain .list .item {
+  float: left;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+html body #app .head .headerMain .list .item:nth-child(1) {
+  margin-top: 53px;
+}
+html body #app .head .headerMain .list .item > a {
+  position: relative;
+}
+html body #app .head .headerMain .list .item > a > span {
+  color: blue;
+  transition: width 1s;
+}
+html body #app .head .headerMain .list .item > a > span:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: black;
+  width: 0;
+  overflow: hidden;
+}
+html body #app .head .headerMain .list .item.active > a > span:nth-child(2) {
+  width: auto;
+}
+html body #app .head .headerMain .list .item:hover > a > span:nth-child(2) {
+  width: auto;
+}
+html body #app .head .headerMain .arrow {
+  position: absolute;
+  left: 50%;
+  top: 76px;
+  width: 20px;
+  height: 20px;
+  background: url("../../static/img/arrow.jpg") no-repeat;
+  z-index: 9;
+  transition: left 0.2s linear;
+}
+html body #app .content {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  background: #cccccc;
+  overflow: hidden;
+}
+html body #app .content .list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: top 0.4s linear;
+}
+html body #app .content .list li {
+  position: relative;
+}
+html body #app .content .list li div {
+  width: 1100px;
+  height: 520px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+html body #app .content .list li.home div {
+  background: pink;
+}
+html body #app .content .list li.course div {
+  background: hotpink;
+}
+html body #app .content .list li.works div {
+  background: purple;
+}
+html body #app .content .list li.about div {
+  background: green;
+}
+html body #app .content .list li.team div {
+  background: greenyellow;
+}
+html body #app .content .points {
+  width: 34px;
+  height: 170px;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: 0;
+  margin: auto;
+}
+html body #app .content .points li {
+  width: 30px;
+  height: 30px;
+  border: 2px solid green;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+html body #app .content .points li.active {
+  background: white;
 }
 
 /*# sourceMappingURL=index.min.css.map */
