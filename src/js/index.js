@@ -7,7 +7,7 @@ import "./business/works.js"
 import "./frame/frame.js"
 
 window.onresize= ()=> {
-  var contentLiNodes=document.querySelectorAll("html body #app .content .list li");
+  var contentLiNodes=document.querySelectorAll("html body #app .content >.list >li");
   var contentNode=document.querySelector("html body #app .content ");
   var arrowNode=document.querySelector("html body #app .head .headerMain .arrow")
   var liNodes=document.querySelectorAll( "html body #app .head .headerMain .list .item");

@@ -91,15 +91,15 @@ html{
         bottom: 0;
         background: url("../../static/img/timg.jfif");
         overflow: hidden;
-        .list{
+        & >.list{
           position: absolute;
           left: 0;
           top:0;
           width: 100%;
           transition: top .4s linear;
-          li{
+          &>li{
             position:relative;
-            div{
+            &>div{
             width: 1100px;
             height: 520px;
             position:absolute;
@@ -117,7 +117,7 @@ html{
             }
             &.course{
               div{
-                background: hotpink;
+
               }
 
             }
