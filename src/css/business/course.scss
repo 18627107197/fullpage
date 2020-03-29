@@ -30,22 +30,38 @@ html{
                     float: left;
                     width: 120px;
                     height: 132px;
-                    background: pink;
+                    perspective: 500px;
+                    transform-style: preserve-3d;
                     span{
                       position: absolute;
                       left: 0;
                       top: 0;
                       right: 0;
                       bottom: 0;
+                      background-repeat: no-repeat;
+                      transition: 1s transform linear;
                     &.backface{
                       background: url("../../static/img/backface.jpg");
                       background-position:50% 50% ;
+                      backface-visibility: hidden;
                     }
                     &.face{
                       background: #009ee0;
                       color: white;
                       padding: 15px;
+                      transform: rotateY(180deg);
+                      backface-visibility: hidden;
                     }
+                    }
+                    &:hover{
+                      span{
+                        &.backface{
+                          transform: rotateY(180deg);
+                        }
+                        &.face{
+                          transform: rotateY(360deg);
+                        }
+                      }
                     }
                   }
                 }
