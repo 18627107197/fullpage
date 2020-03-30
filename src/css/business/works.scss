@@ -1,0 +1,126 @@
+@import "../extend/extend.scss";
+@import "../animation/animation.scss";
+html{
+  body{
+    #app{
+      .content{
+        &>.list{
+          &>li{
+            &.works{
+              &> div{
+              & >.works-1{
+                @extend .commonTitle;
+                margin: 50px 0 100px 50px;
+              }
+              & >.works-2{
+                margin: 50px;
+                &>.list{
+                  @extend .clearfix;
+                  &>.item{
+                    position: relative;
+                    float: left;
+                    width: 220px;
+                    height: 133px;
+                    margin: 0 1px;
+                    overflow: hidden;
+
+                    &:hover{
+                      &>span{
+                        &.pic{
+                          transform: rotate(35deg) scale(1.5);
+                        }
+                        &.mask{
+                          opacity: .6;
+                        }
+
+                      }
+                      &>.icon{
+                        opacity: 1;
+                        background-position: 0 -20px;
+                      }
+                    }
+                    &:nth-child(4){
+                      width: 332px;
+                      height: 133px;
+                    }
+                    &:nth-child(1){
+                        &>span{
+                          &.pic{
+                            background: url("../../static/img/works1.jpg");
+                          }
+                        }
+                      }
+                    &:nth-child(2){
+                      &>span{
+                        &.pic{
+                          background: url("../../static/img/works2jpg.jpg");
+                          background-position: 50% 28%;
+                        }
+                      }
+                    }
+                    &:nth-child(3){
+                      &>span{
+                        &.pic{
+                          background: url("../../static/img/works3.jpg");
+                          background-position: 46% 45%;
+                        }
+                      }
+                    }
+                    &:nth-child(4){
+                      &>span{
+                        &.pic{
+                          background: url("../../static/img/works4.jpg");
+                        }
+                      }
+                    }
+                    &>span{
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      background-repeat: no-repeat;
+                      &.pic{
+                        transition: 1s transform linear;
+                      }
+                      &.mask{
+                        background: rgb(25,25,25,.8);
+                        color: white;
+                        padding: 15px;
+                        opacity: 0;
+                      }
+
+                    }
+                    &>.icon{
+                      position: absolute;
+                      right: 30%;
+                      top: 40px;
+                      display: block;
+                      width: 32px;
+                      height:34px;
+                      background: url("../../static/img/glass.jpg");
+                      background-position: 50% 50%;
+                      opacity: 0;
+                      transition:.5s background-position linear ;
+                    }
+                  }
+                }
+                }
+              & >.works-3{
+              position: absolute;
+                left: 882px;
+                top: 151px;
+              width: 167px;
+              height: 191px;
+               background: url("../../static/img/robot.jpg");
+                animation:2s move infinite;
+              }
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

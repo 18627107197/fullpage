@@ -1,0 +1,16 @@
+@keyframes move {
+  0%{
+  }
+  49%{
+    transform: translateX(-389px) rotateY(0deg);
+  }
+  50%{
+    transform: translateX(-390px) rotateY(180deg);
+  }
+  99%{
+    transform: translateX(1px) rotateY(179deg);
+  }
+  100%{
+    transform: translateX(0px) rotateY(0deg);
+  }
+}
