@@ -1,0 +1,96 @@
+@import "../extend/extend.scss";
+@import "../mixin/mixin.scss";
+@import "../font/font.scss";
+@import "../animation/animation.scss";
+html {
+  body {
+    #app {
+      .content {
+        & > .list {
+          & > li {
+            &.home{
+              & > div {
+                & > ul {
+                  &.home-list {
+                   width: 100%;
+                   height: 100%;
+                   perspective: 800px;
+                   transform-style: preserve-3d;
+                    & > .home-item {
+                      background-repeat: no-repeat;
+                      @include juzhong();
+                      font:80px/520px "segoesc.ttf";
+                      color: white;
+                      font-weight: 800;
+                      text-align: center;
+                      visibility: hidden;
+                      &:nth-child(1){
+                        background: url("../../static/img/qian.png");
+
+                      }
+                      &:nth-child(2){
+                        background: url("../../static/img/hou.png");
+                       }
+                      &:nth-child(3){
+                        background: url("../../static/img/zuo.png");
+                      }
+                      &:nth-child(4){
+                        background: url("../../static/img/you.png");
+                      }
+                      &.active{
+                        visibility:visible;
+                      }
+                      &.leftHide{
+                        transform: translateX(0px) translateZ(-200px) rotateY(0deg) scale(.9);
+                        visibility: hidden;
+                        animation: 1s 1 leftHide linear;
+                      }
+                      &.rightShow{
+                        transform: translateX(0px) translateZ(-100px) rotateY(0deg) scale(.9);
+                        animation: 1s 1 rightShow linear;
+                        visibility: visible;
+                      }
+                      &.rightHide{
+                        transform: translateX(0px) translateZ(-200px) rotateY(0deg) scale(.9);
+                        visibility: hidden;
+                        animation: 1s 1 rightHide linear;
+                      }
+                      &.leftShow{
+                        transform: translateX(0px) translateZ(-100px) rotateY(0deg) scale(.9);
+                        animation: 1s 1 leftShow linear;
+                        visibility: visible;
+                      }
+                    }
+
+                  }
+                  &.home-points {
+                    width:100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    font-size: 0;
+                    text-align: center;
+                      & > .point {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        background: rgba(255,255,255,.5);
+                        margin: 4px;
+                        border-radius: 50%;
+                        box-shadow: 0 0 6px rgb(25,25,25,.8);
+                        &.active{
+                          background: white;
+                        }
+                      }
+
+                    }
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

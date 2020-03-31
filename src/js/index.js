@@ -1,11 +1,14 @@
 import "@babel/polyfill"
 import "./business/about.js"
 import "./business/course.js"
-import "./business/home.js"
+import  homeFn from"./business/home.js"
 import "./business/team.js"
 import "./business/works.js"
-import "./frame/frame.js"
-
+import  frameFn from"./frame/frame.js"
+window.onload=function () {
+  frameFn();
+  homeFn();
+}
 window.onresize= ()=> {
   var contentLiNodes=document.querySelectorAll("html body #app .content >.list >li");
   var contentNode=document.querySelector("html body #app .content ");
