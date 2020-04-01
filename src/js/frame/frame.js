@@ -9,7 +9,7 @@ export default function(){
     var listNode=document.querySelector("html body #app .content >.list");
     var pointsLiNodes=document.querySelectorAll("html body #app .content .points li");
     arrowNode.style.left=(liNodes[0].offsetLeft+(liNodes[0].offsetWidth/2)-(arrowNode.offsetWidth/2))+"px"
-    move(0)
+    move(3)
     for (var i=0;i<liNodes.length;i++){
       liNodes[i].index=i
       pointsLiNodes[i].index=i

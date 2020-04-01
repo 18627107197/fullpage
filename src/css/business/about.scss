@@ -1,0 +1,91 @@
+@import "../extend/extend.scss";
+@import "../mixin/mixin.scss";
+
+html{
+  body{
+    #app{
+      .content{
+        &>.list{
+          &>li{
+            &.about{
+              & >div{
+                  &>.about-1{
+                    @extend .commonTitle;
+                    margin: 50px 0 100px 50px;
+                  }
+                  &>.about-2{
+                    @extend .commonText;
+                    width:400px;
+                    margin-left: 50px;
+                  }
+                &>.box{
+                  position: relative;
+                  width: 260px;
+                  height: 200px;
+                  border: 5px rgba(255,255,255,.5);
+                  border-radius: 8px;
+                  overflow: hidden;
+                  &:hover{
+                    &>span{
+                      transform: scale(1);
+                    }
+                  }
+                  &>span{
+                    @include juzhong();
+                    transform: scale(1.5);
+                    transition: 1s transform;
+                  }
+                  &>ul{
+                    @include juzhong();
+                    li{
+                      float: left;
+                      position: relative;
+                      left: 0;
+                      top: 0;
+                      overflow: hidden;
+                      img{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transition: .8s left,.8s top;
+                      }
+                    }
+                  }
+                  &.about-3{
+                    position: absolute;
+                    left: 750px;
+                    top: 50px;
+                    &>span{
+                     background: url("../../static/img/spider3.jpg");
+                    }
+                    &>ul{
+                      @extend .clearfix;
+
+                    }
+                  }
+                  &.about-4{
+                    position: absolute;
+                    left:600px;
+                    top: 290px;
+                    &>span{
+                      background: url("../../static/img/spider1.jpg");
+
+                    }
+                    &>ul{
+                      li{
+
+                      }
+                    }
+                  }
+
+
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
