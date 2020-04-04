@@ -1,0 +1,61 @@
+@import "../extend/extend.scss";
+@import "../animation/animation.scss";
+html{
+  body{
+    #app{
+      .content{
+        &>.list{
+          &>li{
+            &.team{
+              &> div{
+                & >.team-1{
+                  @extend .commonTitle;
+                  width:400px;
+                  margin: 50px;
+                  float: left;
+                }
+                & >.team-2 {
+                  @extend .commonText;
+                  width:400px;
+                  margin: 50px;
+                  float: right;
+                }
+                & >.team-3{
+                  position:absolute ;
+                  left: 0;
+                  right: 0;
+                  top:250px ;
+                  margin: auto;
+                  width:944px;
+                  height: 448px;
+
+                    & >.list{
+                      position: relative;
+                      width: 100%;
+                      height: 100%;
+
+
+                      & >.item{
+                        float: left;
+                        width: 20%;
+                        height: 100%;
+                        background: green;
+                        background: url("../../static/img/team1.jpg") no-repeat;
+                      }
+                      & >.box{
+                      position: absolute;
+                        left: 0;
+                        top: 0;
+                        display: none;
+                        }
+                    }
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

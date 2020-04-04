@@ -2,13 +2,15 @@ import "@babel/polyfill"
 import aboutFn from "./business/about.js"
 import "./business/course.js"
 import  homeFn from "./business/home.js"
-import "./business/team.js"
+import  teamFn from"./business/team.js"
 import "./business/works.js"
 import  frameFn from"./frame/frame.js"
+import qipaoFn from "./qipao/qipao";
 window.onload=function () {
   frameFn();
   homeFn();
   aboutFn();
+  teamFn();
 }
 window.onresize= ()=> {
   var contentLiNodes=document.querySelectorAll("html body #app .content >.list >li");
