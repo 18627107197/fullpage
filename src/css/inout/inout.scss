@@ -1,0 +1,86 @@
+#app .home .home-list{
+  transform:translateY(-200px);
+  opacity: 0;
+  transition: transform 1s,opacity 1s;
+}
+#app .home .home-points{
+  opacity: 0;
+  transform:translateY(200px);
+  transition: transform 1s,opacity 1s;
+}
+#app .course .plane1{
+   width: 359px;
+   height: 283px;
+   background: url("../../static/img/plane3.jpg") no-repeat;
+   position: absolute;
+   left: 300px;
+   top: -100px;
+   transition: 1s;
+
+ }
+#app .course .plane2{
+  width: 309px;
+  height: 249px;
+  background: url("../../static/img/plane2.jpg") no-repeat;
+  position: absolute;
+  left: -100px;
+  top: 200px;
+  transition: 1s;
+
+}
+#app .course .plane3{
+  width: 230px;
+  height: 182px;
+  background: url("../../static/img/plane1.jpg") no-repeat;
+  position: absolute;
+  left: 300px;
+  top: 400px;
+  transition: 1s;
+
+}
+#app .works .pencel1{
+  width: 180px;
+  height: 97px;
+  background: url("../../static/img/pen1.jpg") no-repeat;
+  position: absolute;
+  left: 500px;
+  top: 0px;
+  transition: 1s;
+
+}
+#app .works .pencel2{
+  width: 268px;
+  height: 100px;
+  background: url("../../static/img/pen2.jpg") no-repeat;
+  position: absolute;
+  left: 300px;
+  top: 250px;
+  transition: 1s;
+
+}
+#app .works .pencel3{
+  width:441px;
+  height: 231px;
+  background: url("../../static/img/pen3.jpg") no-repeat;
+  position: absolute;
+  left: 600px;
+  top: 300px;
+  transition: 1s;
+
+}
+#app .about .about-3{
+  transform:rotate(45deg);
+  transition: 1s transform;
+}
+#app .about .about-4{
+  transform:rotate(-45deg);
+  transition:1s transform;
+}
+#app .team .team-1{
+  transform:translateX(-100px);
+  transition: 2s transform;
+}
+#app .team .team-2{
+  transform:translateX(100px);
+  transition: 2s transform;
+}

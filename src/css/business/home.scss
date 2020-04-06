@@ -8,6 +8,7 @@ html {
       .content {
         & > .list {
           & > li {
+            overflow: hidden;
             &.home{
               & > div {
                 & > ul {
@@ -16,6 +17,8 @@ html {
                    height: 100%;
                    perspective: 800px;
                    transform-style: preserve-3d;
+
+
                     & > .home-item {
                       background-repeat: no-repeat;
                       @include juzhong();
@@ -64,6 +67,7 @@ html {
 
                   }
                   &.home-points {
+
                     width:100%;
                     position: absolute;
                     left: 0;
